@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/projets', function () {
+    return view('projets');
+});
+
+Route::get('/projet/{id}', function ($id) {
+    return 'ICI on va afficher le projet numero: '.$id;
+})->name('projet');
